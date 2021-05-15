@@ -1,0 +1,9 @@
+
+---     VALIDATION TEST      ---
+console.log(JSON.stringify(marlonCoin, null, 4));
+
+// marlonCoin.chain[1].data = {amount: 99}
+// marlonCoin.chain[1].hash = marlonCoin.chain[1].calculateHash();
+
+console.log('Is blockchain valid? ' + marlonCoin.isChainValid());
+---     VALIDATION TEST      ---
