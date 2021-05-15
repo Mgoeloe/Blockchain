@@ -74,6 +74,12 @@ marlonCoin.addBlock(new Block(2, "08/01/2021", {amount: 10}));
 console.log('Mining block 3...')
 marlonCoin.addBlock(new Block(3, "10/01/2021", {amount: 5}));
 
+console.log('Mining block 4...')
+marlonCoin.addBlock(new Block(4, "12/01/2021", {amount: 3}));
+
+console.log('Mining block 5...')
+marlonCoin.addBlock(new Block(5, "12/01/2021", {amount: 7}));
+
 console.log(JSON.stringify(marlonCoin, null, 4));
 
 console.log('Is blockchain valid? ' + marlonCoin.isChainValid());
