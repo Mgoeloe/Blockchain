@@ -32,7 +32,7 @@ class Blockchain{
     }
 
     createGenesisBlock(){
-        return new Block(0, "01/01/2021", "Genesis block", "0");
+        return new Block(0, Date(), "Genesis block", "0");
     }
 
     getLatestBlock(){
@@ -66,21 +66,24 @@ class Blockchain{
 let marlonCoin = new Blockchain();
 
 console.log('Mining block 1...')
-marlonCoin.addBlock(new Block(1, "02/01/2021", {amount: 4}));
+marlonCoin.addBlock(new Block(1, Date(), {amount: ~~(Math.random()*100)}));
 
 console.log('Mining block 2...')
-marlonCoin.addBlock(new Block(2, "08/01/2021", {amount: 10}));
+marlonCoin.addBlock(new Block(2, Date(), {amount: ~~(Math.random()*100)}));
 
 console.log('Mining block 3...')
-marlonCoin.addBlock(new Block(3, "10/01/2021", {amount: 5}));
+marlonCoin.addBlock(new Block(3, Date(), {amount: ~~(Math.random()*100)}));
 
 console.log('Mining block 4...')
-marlonCoin.addBlock(new Block(4, "12/01/2021", {amount: 3}));
+marlonCoin.addBlock(new Block(4, Date(), {amount: ~~(Math.random()*100)}));
 
 console.log('Mining block 5...')
-marlonCoin.addBlock(new Block(5, "12/01/2021", {amount: 7}));
+marlonCoin.addBlock(new Block(5, Date(), {amount: ~~(Math.random()*100)}));
 
 console.log(JSON.stringify(marlonCoin, null, 4));
+
+// marlonCoin.chain[1].data = {amount: 99}
+// marlonCoin.chain[1].hash = marlonCoin.chain[1].calculateHash();
 
 console.log('Is blockchain valid? ' + marlonCoin.isChainValid());
 
